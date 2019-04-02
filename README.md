@@ -6,11 +6,11 @@ https://github.com/MemoryLimitExceeded/Android-Learning/blob/master/201804141619
 
 ##### Java
 
-> - 基础语法
->   - if
->   - while
->   - for
->   - 运算符
+ - 基础语法
+   - if
+   - while
+   - for
+   - 运算符
 
 - 类
   - 静态、非静态
