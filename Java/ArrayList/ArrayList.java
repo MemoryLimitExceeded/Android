@@ -3,61 +3,63 @@ import java.util.AbstractList;
 import java.util.List;
 import java.util.RandomAccess;
 
-import javax.swing.table.TableStringConverter;
-
 /**
  * @author shuafen/MLE
- * @version 1.0
+ * @version 1.0 edit
  */
 
 public class ArrayList<E>
-//extends AbstractList<E>
+extends AbstractList<E>
 //implements List<E>, RandomAccess, Cloneable, Serializable
 {
 	/**
-	 * Description: åºåˆ—åŒ–ç‰ˆæœ¬å·
+	 * ÐòÁÐ»¯°æ±¾ºÅ
 	 */
 	private static final long serialVersionUID = -2993544531683317990L;
+	/**
+	 * Ä¬ÈÏÈÝÁ¿
+	 */
+	private static final int DEFAULT_CAPACITY = 10;
 	private Object[] mElements;
 	private int mSize;
 	private int mCapacity;
 	/**
-	 * Descriptionï¼šArrayList æž„é€ æ–¹æ³•
-	 * 1 ï¼šæ— å‚æž„é€ é»˜è®¤å®¹é‡ä¸º 10
-	 * 2 ï¼šæœ‰å‚æž„é€ å®¹é‡è‡ªå®š
+	 * ArrayList ¹¹Ôì·½·¨
+	 * 1 £ºÎÞ²Î¹¹ÔìÄ¬ÈÏÈÝÁ¿Îª 10
+	 * 2 £ºÓÐ²Î¹¹ÔìÈÝÁ¿×Ô¶¨
 	 */
 	public ArrayList()
 	{
-		//super();		éšå¼è°ƒç”¨
-		this(10);
+		//super();		ÒþÊ½µ÷ÓÃ
+		this(DEFAULT_CAPACITY);
 	}
 	public ArrayList(int capacity)
 	{
-		//super();		éšå¼è°ƒç”¨
+		//super();		ÒþÊ½µ÷ÓÃ
 		mElements = new Object[capacity];
 		mCapacity = capacity;
 		mSize = 0;
 	}
 	/**
-	 * Descriptionï¼šè¿”å›žå·²åŒ…å« Object çš„ä¸ªæ•°
+	 * ·µ»ØÔªËØ¸öÊý
 	 */
 	public int size()
 	{
 		return mSize;
 	}
 	/**
-	 * Descriptionï¼šè¿”å›žå®¹é‡å¤§å°
+	 * ·µ»ØÈÝÁ¿´óÐ¡
 	 */
 	public int capacity()
 	{
 		return mCapacity;
 	}
 	/**
-	 * 
+	 * ÖØÐÂ·ÖÅä¿Õ¼ä£¬Êý×é¸´ÖÆÊµÏÖ¿Õ¼äµÄ·ÖÅä£¬Èç¹ûÖØÐÂ·ÖÅäµÄ¿Õ¼äÐ¡ÓÚµÈÓÚÊµ¼ÊÊ¹ÓÃµÄ¿Õ¼äÔò²»±ä
 	 */
-	public void recapacity(int capacity)
+	public void reCapacity(int capacity)
 	{
-		if(capacity > mCapacity)
+		if(capacity > mSize)
 		{
 			Object[] elements = new Object[capacity];
 			for(int i = 0; mSize > i; i++)
@@ -65,17 +67,24 @@ public class ArrayList<E>
 				elements[i] = mElements[i];
 			}
 			mElements = elements;
+			mCapacity = capacity;
 		}
 	}
 	/**
-	 * Descriptionï¼šæ·»åŠ å…ƒç´ 
+	 * Ìí¼ÓÔªËØ£¬Èç¹ûÈÝÁ¿²»¹»ÔòÈÝÁ¿À©Ôöµ½ (Ô­Ê¼ÈÝÁ¿ * 3) / 2 + 1
 	 */
-	public void add(Object obj)
+	@Override
+	public boolean add(E obj)
 	{
+		if(mSize == mCapacity)
+		{
+			reCapacity((mCapacity * 3) / 2 + 1);
+		}
 		mElements[mSize++] = obj;
+		return true;
 	}
 	/**
-	 * Description: æ¸…ç©º ArrayList
+	 * Çå¿Õ ArrayList
 	 */
 	public void clear()
 	{
@@ -86,13 +95,48 @@ public class ArrayList<E>
 		}
 	}
 	/**
-	 * Description: æµ‹è¯•
+	 * ArrayList ÊÇÓë·ñÎª¿Õ
+	 */
+	public boolean isEmpty()
+	{
+		return mSize==0;
+	}
+	/**
+	 * ¸´ÖÆ³öÒ»¸öÍêÈ«Ò»ÑùµÄ ArrayList ÊµÀý
+	 */
+	public ArrayList<?> clone()
+	{
+		ArrayList<?> clonearray = new ArrayList<>(mCapacity);
+		clonearray.mElements = mElements.clone();
+		return clonearray;
+	}
+	/**
+	 * check ÏÂ±êÊÇ·ñÔ½½ç
+	 */
+	private void rangeChecker(int index)
+	{
+		if(index >= mSize || index < 0)
+		{
+			throw new ArrayIndexOutOfBoundsException("Ô½½ç·ÃÎÊ");
+		}
+	}
+	/**
+	 * Ëæ»ú·ÃÎÊ£¬È¡³öÏÂ±êÎª index µÄÔªËØ
+	 * @param index
+	 * @return
+	 */
+	@Override
+	public E get(int index)
+	{
+		rangeChecker(index);
+		return (E) mElements[index];
+	}
+	/**
+	 * ²âÊÔ
 	 */
 	public static void main(String[] args)
 	{
 		ArrayList<Integer> test = new ArrayList<>();
-		System.out.println(test.size());
-		ArrayList<String> test1 = new ArrayList<>(0);
-		System.out.println(test1.size());
+		Integer aInteger = test.get(1);
 	}
 }

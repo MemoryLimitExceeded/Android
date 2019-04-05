@@ -14,30 +14,34 @@ ArrayList 实现 **Java.io.Serializable** 接口，这意味着 ArrayList 支持
 
 Windows 7 旗舰版
 
-Eclipse IDE for Eclipse Committers (32bit)
+Eclipse IDE for Eclipse Committers (32 bit)
 
 Version: 2018-09 (4.9.0)
 
 JDK 1.8
 
-#### 函数API
+#### API
 
 ##### 构造函数
 
+```.java
 public ArrayList()
-
 public ArrayList(int)
+```
 
 ##### 方法
 
-public int size()
+```.java
+public int size()											//元素个数
+public int capacity()										//容量大小
+public void reCapacity(int)									//重新分配空间
+public void add(E)											//添加元素
+public void clear()											//清空
+public boolean isEmpty()									//判空
+public ArrayList<?> clone()									//克隆
+private void rangeChecker(int)								//下标检查器
+public E get(int)											//随机访问
+public static void main(String[])							//测试
+```
 
-public int capacity()
 
-public void recapacity(int)
-
-public void add(Object)
-
-public void clear()
-
-public static void main(String[] args)
