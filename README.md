@@ -4,7 +4,7 @@ Android 知识框架图
 
 https://github.com/MemoryLimitExceeded/Android-Learning/blob/master/20180414161936480.png
 
-##### Java
+#### Java
 
  - 基础语法
    - if
@@ -26,7 +26,7 @@ https://github.com/MemoryLimitExceeded/Android-Learning/blob/master/201804141619
 - 多线程
   - [线程池的工作过程](http://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485062&idx=1&sn=561c812a635457ab85abb52f36d44aae&chksm=ebd74787dca0ce91b105a5bfc3efe9fe7a5c583f76817733a0b74be6f3481bee1f553fdb4463&mpshare=1&scene=23&srcid=#rd)
 
-##### Android
+#### Android
 
 - Android 四大组件
   - [Activity](https://developer.android.google.cn/guide/components/activities.html)
