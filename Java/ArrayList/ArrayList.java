@@ -10,7 +10,7 @@ import java.util.RandomAccess;
 
 public class ArrayList<E>
 extends AbstractList<E>
-//implements List<E>, RandomAccess, Cloneable, Serializable
+implements List<E>, RandomAccess, Cloneable, Serializable
 {
 	/**
 	 * 序列化版本号
@@ -43,12 +43,14 @@ extends AbstractList<E>
 	/**
 	 * 返回元素个数
 	 */
+	@Override
 	public int size()
 	{
 		return mSize;
 	}
 	/**
 	 * 返回容量大小
+	 * @return
 	 */
 	public int capacity()
 	{
@@ -56,6 +58,7 @@ extends AbstractList<E>
 	}
 	/**
 	 * 重新分配空间，数组复制实现空间的分配，如果重新分配的空间小于等于实际使用的空间则不变
+	 * @param capacity
 	 */
 	public void reCapacity(int capacity)
 	{
@@ -86,6 +89,7 @@ extends AbstractList<E>
 	/**
 	 * 清空 ArrayList
 	 */
+	@Override
 	public void clear()
 	{
 		while(mSize != 0)
@@ -97,27 +101,95 @@ extends AbstractList<E>
 	/**
 	 * ArrayList 是与否为空
 	 */
+	@Override
 	public boolean isEmpty()
 	{
-		return mSize==0;
+		return mSize == 0;
+	}
+	/**
+	 * 从前往后遍历找到第一个和元素 o 一样的元素并返回它所在的下标
+	 */
+	@Override
+	public int indexOf(Object o)
+	{
+		if(o == null)
+		{
+			for(int i = 0; mSize > i; i++)
+			{
+				if(o == null)
+				{
+					return i;
+				}
+			}
+		}
+		else
+		{
+			for(int i = 0; mSize > i; i++)
+			{
+				if(o.equals(mElements[i]))
+				{
+					return i;
+				}
+			}
+		}
+		return -1;
+	}
+	/**
+	 * 与 IndexOf 类似，从后往前遍历找到第一个和元素 o 一样的元素并返回它所在的下标
+	 */
+	@Override
+	public int lastIndexOf(Object o)
+	{
+		if(o == null)
+		{
+			for(int i = mSize - 1; i >= 0; i--)
+			{
+				if(o == null)
+				{
+					return i;
+				}
+			}
+		}
+		else
+		{
+			for(int i = mSize - 1; i >= 0; i--)
+			{
+				if(o.equals(mElements[i]))
+				{
+					return i;
+				}
+			}
+		}
+		return -1;
+	}
+	/**
+	 * 是否包含 o 元素
+	 */
+	@Override
+	public boolean contains(Object o)
+	{
+		return indexOf(o) != -1;
 	}
 	/**
 	 * 复制出一个完全一样的 ArrayList 实例
 	 */
-	public ArrayList<?> clone()
+	@Override
+	public ArrayList<E> clone()
 	{
-		ArrayList<?> clonearray = new ArrayList<>(mCapacity);
-		clonearray.mElements = mElements.clone();
+		ArrayList<E> clonearray = new ArrayList<>(mCapacity);
+		
+		//clonearray.mElements = mElements.clone();
 		return clonearray;
 	}
 	/**
 	 * check 下标是否越界
+	 * @param index
 	 */
 	private void rangeChecker(int index)
 	{
 		if(index >= mSize || index < 0)
 		{
-			throw new ArrayIndexOutOfBoundsException("越界访问");
+			throw new ArrayIndexOutOfBoundsException("越界访问"+" size:"+mSize+" index:"+index);
 		}
 	}
 	/**
@@ -137,6 +209,9 @@ extends AbstractList<E>
 	public static void main(String[] args)
 	{
 		ArrayList<Integer> test = new ArrayList<>();
-		Integer aInteger = test.get(1);
+		test.add(1);
+		ArrayList<Integer> test1 = test.clone();
+		System.out.println(test.get(0));
+		System.out.println(test1.get(0));
 	}
 }

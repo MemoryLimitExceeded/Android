@@ -20,7 +20,7 @@ Version: 2018-09 (4.9.0)
 
 JDK 1.8
 
-#### API
+### API
 
 ##### 构造函数
 
@@ -38,6 +38,9 @@ public void reCapacity(int)									//重新分配空间
 public void add(E)											//添加元素
 public void clear()											//清空
 public boolean isEmpty()									//判空
+public int indexOf(Object)									//顺序查找第一个相同元素
+public int lastIndexOf(Object)								//逆序查找第一个相同元素
+public boolean contains(Object)								//是否包含给定元素
 public ArrayList<?> clone()									//克隆
 private void rangeChecker(int)								//下标检查器
 public E get(int)											//随机访问
