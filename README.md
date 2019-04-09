@@ -55,3 +55,7 @@ Android 目录用于 Android 编程权威指南第 3 版项目练习
 
 [面试江湖：一招破解 Java 集合类面试题](https://mp.weixin.qq.com/s?__biz=MzUyOTk5NDQwOA==&mid=2247485204&idx=1&sn=efb545ad88dec3d17207f8a9d71458be&chksm=fa59c0d3cd2e49c53414128bae049e1d658bc8677896fa4b134f64537ae24dd38868b5ee0ab7&mpshare=1&scene=23&srcid=#rd)
 
+[什么是消息队列](https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485080&idx=1&sn=f223feb9256727bde4387d918519766b&chksm=ebd74799dca0ce8fa46223a33042a79fc16ae6ac246cb8f07e63a4a2bdce33d8c6dc74e8bd20&mpshare=1&scene=23&srcid=0409miJTefirATUKMH8DPy63#rd)
+
+[漫话：如何给女朋友解释什么是乐观锁与悲观锁](https://mp.weixin.qq.com/s?__biz=Mzg3MjA4MTExMw==&mid=2247485251&idx=1&sn=c11d4aaafa072ff00c2d7199ca9bfc8e&chksm=cef5f4f5f9827de3811bad3dbe452a71c78a968d3b6ded2fb5f96b1720cd2d34b85745fbba22&mpshare=1&scene=23&srcid=#rd)
+
