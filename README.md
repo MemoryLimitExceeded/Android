@@ -47,3 +47,11 @@ Android 目录用于 Android 编程权威指南第 3 版项目练习
 
 [Android：你不能忽略的代码命名规范](https://www.jianshu.com/p/b7a644ea0d25)
 
+[一个HTTP打趴80%面试者](https://mp.weixin.qq.com/s?__biz=MzAwNTM0ODY1Mg==&mid=2457116071&idx=1&sn=1d3fc05837fac690829e43fc135e25be&chksm=8c9e31e4bbe9b8f2a64c223c48a458ab4af27146fa6d63d367b89792d6ff7f34887702b2ceeb&token=393364506&lang=zh_CN#rd)
+
+[Java集合框架面试题（详解）](https://blog.csdn.net/qq_42651904/article/details/89089218)
+
+[搞定计算机网络面试，看这篇就够了](https://mp.weixin.qq.com/s?__biz=MzUyOTk5NDQwOA==&mid=2247485219&idx=1&sn=c4b24be02bc3311fe161669555f00406&chksm=fa59c0e4cd2e49f2a7d6ab760feb3dfbba2cbc77da2a9c4ac450b9c5a78f5be8859e1aa586af&mpshare=1&scene=23&srcid=#rd)
+
+[面试江湖：一招破解 Java 集合类面试题](https://mp.weixin.qq.com/s?__biz=MzUyOTk5NDQwOA==&mid=2247485204&idx=1&sn=efb545ad88dec3d17207f8a9d71458be&chksm=fa59c0d3cd2e49c53414128bae049e1d658bc8677896fa4b134f64537ae24dd38868b5ee0ab7&mpshare=1&scene=23&srcid=#rd)
+
