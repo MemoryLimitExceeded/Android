@@ -59,3 +59,5 @@ Android 目录用于 Android 编程权威指南第 3 版项目练习
 
 [漫话：如何给女朋友解释什么是乐观锁与悲观锁](https://mp.weixin.qq.com/s?__biz=Mzg3MjA4MTExMw==&mid=2247485251&idx=1&sn=c11d4aaafa072ff00c2d7199ca9bfc8e&chksm=cef5f4f5f9827de3811bad3dbe452a71c78a968d3b6ded2fb5f96b1720cd2d34b85745fbba22&mpshare=1&scene=23&srcid=#rd)
 
+[搞定操作系统面试，看这篇就够了](https://mp.weixin.qq.com/s?__biz=MzUyOTk5NDQwOA==&mid=2247485229&idx=1&sn=398d01889dcc7149bd74ad015258837b&chksm=fa59c0eacd2e49fc379236b83fa3ef7185cda259174966f5af0f51605be48c5c1f323ffe0661&mpshare=1&scene=23&srcid=#rd)
+
