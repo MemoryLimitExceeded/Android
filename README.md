@@ -61,3 +61,5 @@ Android 目录用于 Android 编程权威指南第 3 版项目练习
 
 [搞定操作系统面试，看这篇就够了](https://mp.weixin.qq.com/s?__biz=MzUyOTk5NDQwOA==&mid=2247485229&idx=1&sn=398d01889dcc7149bd74ad015258837b&chksm=fa59c0eacd2e49fc379236b83fa3ef7185cda259174966f5af0f51605be48c5c1f323ffe0661&mpshare=1&scene=23&srcid=#rd)
 
+[一篇文章告诉你MVC、MVP、MVVM](https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=2649553050&idx=1&sn=246b773ebcf18469c44fd225a1395e58&chksm=f11813e7c66f9af1df4608f34f39e7813c6cc84c0c2bdcff1212a0fc3cb34152294f20e11905&mpshare=1&scene=23&srcid=#rd)
+
