@@ -63,3 +63,5 @@ Android 目录用于 Android 编程权威指南第 3 版项目练习
 
 [一篇文章告诉你MVC、MVP、MVVM](https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=2649553050&idx=1&sn=246b773ebcf18469c44fd225a1395e58&chksm=f11813e7c66f9af1df4608f34f39e7813c6cc84c0c2bdcff1212a0fc3cb34152294f20e11905&mpshare=1&scene=23&srcid=#rd)
 
+[搞懂分布式与高并发和多线程，看这篇就够了](http://mp.weixin.qq.com/s?__biz=MzUyOTk5NDQwOA==&mid=2247485317&idx=1&sn=c5a0f84074c0e101ff0464d298ed22d7&chksm=fa59c042cd2e4954550b2d3a552e56868535ea751cca7d2b2ca850d33e6f65f9627d8584820a&mpshare=1&scene=23&srcid=#rd)
+
