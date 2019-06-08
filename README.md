@@ -4,15 +4,15 @@ Android 知识框架图
 
 https://github.com/MemoryLimitExceeded/Android-Learning/blob/master/20180414161936480.png
 
+Android Guide
+
+https://developer.android.google.cn/guide.html
+
 #### Java
 
  - 基础语法
-   - if
-   - while
-   - for
-   - 运算符
 - 类
-  - 静态、非静态
+  - static
   - final
   - 实例域、方法域
   - 继承
@@ -23,21 +23,39 @@ https://github.com/MemoryLimitExceeded/Android-Learning/blob/master/201804141619
   - [ArrayList](https://www.cnblogs.com/skywang12345/p/3308556.html)
 - [JVM](http://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247484721&idx=2&sn=73b2762abd8c54cdc8b6bb8b5692384b&chksm=ebd74430dca0cd262c0cd72509e8e9df71287eb74d3e3e56430934df7c60db38a78824a80a4a&mpshare=1&scene=23&srcid=0405B7kJR1XWFFZt8WDfZFWT#rd)
   - 类的加载
-- 多线程
-  - [线程池的工作过程](http://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485062&idx=1&sn=561c812a635457ab85abb52f36d44aae&chksm=ebd74787dca0ce91b105a5bfc3efe9fe7a5c583f76817733a0b74be6f3481bee1f553fdb4463&mpshare=1&scene=23&srcid=#rd)
+  - GC 内存回收
+- 并发编程
+  - [Thread 类](https://www.cnblogs.com/renhui/p/6066852.html)
+    - Runnable 接口
+  - 线程池
+    - [线程池的工作过程](http://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485062&idx=1&sn=561c812a635457ab85abb52f36d44aae&chksm=ebd74787dca0ce91b105a5bfc3efe9fe7a5c583f76817733a0b74be6f3481bee1f553fdb4463&mpshare=1&scene=23&srcid=#rd)
+- 设计模式
 
 #### Android
 
 - Android 四大组件
   - [Activity](https://developer.android.google.cn/guide/components/activities.html)
-    - [Intent](https://developer.android.google.cn/guide/components/intents-filters.html)
-- 本地化
+    - onSaveInstanceState
+    - Standard
+    - SingleTop
+    - SingleTask
+    - SingleInstance
+  - Service
+    - 启动
+    - 绑定
+  - ContentProvider
+  - BroadcastReceiver
+- Android 系统机制
+  - 进程和线程
+  - 任务和返回栈
+- Intent 与 Intent 过滤器
+- View 绘制
+- 事件分发
+- 设计模式
+  - MVC
+  - MVP
+  - MVVM
 
-
-
-Java 目录用于重写集合类源码以更深入理解 Java 语法
-
-Android 目录用于 Android 编程权威指南第 3 版项目练习
 
 #### 其他文章
 
