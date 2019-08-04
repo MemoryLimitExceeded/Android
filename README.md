@@ -29,7 +29,7 @@ https://developer.android.google.cn/guide.html
     - Runnable 接口
   - 线程池
     - [线程池的工作过程](http://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485062&idx=1&sn=561c812a635457ab85abb52f36d44aae&chksm=ebd74787dca0ce91b105a5bfc3efe9fe7a5c583f76817733a0b74be6f3481bee1f553fdb4463&mpshare=1&scene=23&srcid=#rd)
-- 设计模式
+- [设计模式](https://www.jianshu.com/p/3fb2a638d13c)
 
 #### Android
 
