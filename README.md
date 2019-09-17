@@ -8,7 +8,47 @@ Android Guide
 
 https://developer.android.google.cn/guide.html
 
-#### Java
+#### 计算机网络
+
+计算机网络自顶向下第 x 版
+
+[韩立刚老师主讲 计算机网络第5版谢希仁编写 95集(网络安全章节部分不全)](https://www.bilibili.com/video/av9876107)
+
+- 物理层 接口标准 电器标准 如何在物理链路上传输更快的速度
+  - 定义
+  - 常用编码
+  - 奈氏准则和香农公式
+  - 传输介质
+  - 信道复用技术
+  - 数字传输系统
+  - 宽带接入
+
+[韩立刚老师主讲 计算机网络第5版谢希仁编写 全集156](https://www.bilibili.com/video/av23124815)
+
+#### 操作系统
+
+现代操作系统第 x 版
+
+[操作系统_清华大学(向勇、陈渝)](https://www.bilibili.com/video/av6538245)
+
+- 计算机体系结构和内存分层体系
+- 地址
+- 内存分配
+  - 连续内存分配
+    - 压缩式
+    - 交换式
+  - 非连续内存分配
+    - 分段
+    - 分页
+    - 页表
+      - 多级页表
+      - 反向页表
+- 虚拟内存
+  - 覆盖技术
+  - 交换技术
+  - 页面置换算法
+
+#### Java (已弃用)
 
  - 基础语法
 - 类
@@ -56,6 +96,19 @@ https://developer.android.google.cn/guide.html
   - MVP
   - MVVM
 
+
+深入理解 Android 内核设计思想
+
+前置技能：操作系统，Java，Linux 操作系统原理
+
+- Android 进程和线程
+  - 进程、线程
+  - Handler、MessageQueue、Runnable、Looper
+  - UI 主线程
+  - Thread、 ThreadLocal
+- ActivityManagerService
+  - Activity Stack
+  - startActivity 流程
 
 #### 其他文章
 
