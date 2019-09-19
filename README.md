@@ -1,10 +1,10 @@
 # Android-Learning
 
-Android 知识框架图
+#### Android 知识框架图
 
 https://github.com/MemoryLimitExceeded/Android-Learning/blob/master/20180414161936480.png
 
-Android Guide
+#### Android Guide
 
 https://developer.android.google.cn/guide.html
 
@@ -14,14 +14,37 @@ https://developer.android.google.cn/guide.html
 
 [韩立刚老师主讲 计算机网络第5版谢希仁编写 95集(网络安全章节部分不全)](https://www.bilibili.com/video/av9876107)
 
-- 物理层 接口标准 电器标准 如何在物理链路上传输更快的速度
-  - 定义
-  - 常用编码
-  - 奈氏准则和香农公式
-  - 传输介质
+- 物理层：接口标准 电器标准 如何在物理链路上传输更快的速度
+  - 基本概念
+  - 数据通信基础知识
+    - 奈氏准则和香农公式
+  - 传输媒体
   - 信道复用技术
   - 数字传输系统
-  - 宽带接入
+  - 宽带接入技术
+- 数据链路层：帧的开始和结束 透明传输 差错校验
+  - 基本概念
+  - 三个问题
+    - 封装成帧
+    - 透明传输
+    - 差错校验
+      - 循环冗余检验(CRC)
+  - 链路协议
+    - HDLC
+    - PPP
+  - 两种情况下的数据链路层
+    - 使用点对点信道的数据链路层
+    - 使用广播信道的数据链路层
+  - CSMA/CD
+    - 争用期
+    - 二进制指数类型退避算法
+  - 以太局域网
+    - 概述
+    - 拓扑
+    - 信道利用率
+    - MAC 层
+  - 扩展局域网
+  - 高速以太网
 
 [韩立刚老师主讲 计算机网络第5版谢希仁编写 全集156](https://www.bilibili.com/video/av23124815)
 
@@ -48,54 +71,27 @@ https://developer.android.google.cn/guide.html
   - 交换技术
   - 页面置换算法
 
-#### Java (已弃用)
+#### Kotlin
 
- - 基础语法
-- 类
-  - static
-  - final
-  - 实例域、方法域
-  - 继承
-  - 封装
-  - [多态](https://www.cnblogs.com/chenssy/p/3372798.html)
-- [泛型](http://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247484109&idx=1&sn=ed48fa9216c260fb9b622d9f383d8c25&chksm=ebd743ccdca0cadad9e8e4a5cd9a7ce96b595ddaf6fb2e817a9a0d49d4d54c50bb93a97e56eb&mpshare=1&scene=23&srcid=0405w0PWyeFziohgkFteudGy#rd)
-- 容器类
-  - [ArrayList](https://www.cnblogs.com/skywang12345/p/3308556.html)
-- [JVM](http://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247484721&idx=2&sn=73b2762abd8c54cdc8b6bb8b5692384b&chksm=ebd74430dca0cd262c0cd72509e8e9df71287eb74d3e3e56430934df7c60db38a78824a80a4a&mpshare=1&scene=23&srcid=0405B7kJR1XWFFZt8WDfZFWT#rd)
-  - 类的加载
-  - GC 内存回收
-- 并发编程
-  - [Thread 类](https://www.cnblogs.com/renhui/p/6066852.html)
-    - Runnable 接口
-  - 线程池
-    - [线程池的工作过程](http://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485062&idx=1&sn=561c812a635457ab85abb52f36d44aae&chksm=ebd74787dca0ce91b105a5bfc3efe9fe7a5c583f76817733a0b74be6f3481bee1f553fdb4463&mpshare=1&scene=23&srcid=#rd)
-- [设计模式](https://www.jianshu.com/p/3fb2a638d13c)
+Kotlin 实战
+
+- Kotlin 基础
+  - 变量、运算符、流程控制
+  - 函数
+
+#### JVM
 
 #### Android
 
-- Android 四大组件
-  - [Activity](https://developer.android.google.cn/guide/components/activities.html)
-    - onSaveInstanceState
-    - Standard
-    - SingleTop
-    - SingleTask
-    - SingleInstance
-  - Service
-    - 启动
-    - 绑定
-  - ContentProvider
-  - BroadcastReceiver
-- Android 系统机制
-  - 进程和线程
-  - 任务和返回栈
-- Intent 与 Intent 过滤器
-- View 绘制
-- 事件分发
-- 设计模式
-  - MVC
-  - MVP
-  - MVVM
+##### 入门
 
+第一行代码
+
+##### 进阶
+
+Android 进阶之光
+
+##### 深入底层
 
 深入理解 Android 内核设计思想
 
