@@ -14,6 +14,8 @@ https://developer.android.google.cn/guide.html
 
 [韩立刚老师主讲 计算机网络第5版谢希仁编写 95集(网络安全章节部分不全)](https://www.bilibili.com/video/av9876107)
 
+注：按照因特网 5 层模型分层
+
 - 物理层：接口标准 电器标准 如何在物理链路上传输更快的速度
   - 基本概念
   - 数据通信基础知识
@@ -43,8 +45,26 @@ https://developer.android.google.cn/guide.html
     - 拓扑
     - 信道利用率
     - MAC 层
+      - MAC 帧格式
   - 扩展局域网
   - 高速以太网
+- 网络层：负责选择最佳路径 规划IP地址
+  - 基本概念
+  - 如何转发数据包
+    - 应用层：准备要传输的文件
+    - 传输层：将文件分段，编号
+    - 网络层：添加目标 IP 地址和源 IP 地址
+    - 数据链路层：使用子网掩码判断自己和目标主机是否在同一网段
+      - 同一网段，ARP协议解析目标 IP 地址所对应的 MAC 地址
+  - 网络设备
+  - IP协议
+    - RIP
+    - OSPF
+  - ARP协议和RARP (在七层模型中位于数据链路层)
+    - ARP 欺骗
+  - ICMP 协议
+  - IGMP 协议
+  - IP 数据包格式
 
 [韩立刚老师主讲 计算机网络第5版谢希仁编写 全集156](https://www.bilibili.com/video/av23124815)
 
