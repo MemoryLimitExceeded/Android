@@ -56,15 +56,33 @@ https://developer.android.google.cn/guide.html
     - 网络层：添加目标 IP 地址和源 IP 地址
     - 数据链路层：使用子网掩码判断自己和目标主机是否在同一网段
       - 同一网段，ARP协议解析目标 IP 地址所对应的 MAC 地址
+      - 不同网段，查找网关 MAC 地址，往网关发送数据包
   - 网络设备
-  - IP协议
+  - IP 协议
     - RIP
     - OSPF
-  - ARP协议和RARP (在七层模型中位于数据链路层)
+  - ARP 协议和 RARP (在七层模型中位于数据链路层)
     - ARP 欺骗
   - ICMP 协议
   - IGMP 协议
   - IP 数据包格式
+- 传输层：可靠传输 流量控制 不可靠传输
+  - UDP
+    - 数据包格式
+    - 应用场景
+  - TCP
+    - 数据包格式
+    - 实现
+      - 快重传
+      - 选择传输
+      - 累计确认
+      - 滑动窗口
+    - 流量控制
+    - 拥塞控制
+    - 运输连接管理
+      - 三次握手
+      - 四次挥手
+    - 应用场景
 
 [韩立刚老师主讲 计算机网络第5版谢希仁编写 全集156](https://www.bilibili.com/video/av23124815)
 
@@ -75,17 +93,25 @@ https://developer.android.google.cn/guide.html
 [操作系统_清华大学(向勇、陈渝)](https://www.bilibili.com/video/av6538245)
 
 - 计算机体系结构和内存分层体系
-- 地址
-- 内存分配
-  - 连续内存分配
-    - 压缩式
-    - 交换式
-  - 非连续内存分配
-    - 分段
-    - 分页
-    - 页表
-      - 多级页表
-      - 反向页表
+- 地址空间
+- 内存
+  - 内存碎片
+    - 外部碎片
+    - 内部碎片
+  - 内存分配
+    - 连续内存分配
+      - 分配算法
+        - 第一适配
+        - 最佳适配
+        - 最差适配
+      - 压缩式
+      - 交换式
+    - 非连续内存分配
+      - 分段
+      - 分页
+      - 页表
+        - 多级页表
+        - 反向页表
 - 虚拟内存
   - 覆盖技术
   - 交换技术
@@ -98,6 +124,22 @@ Kotlin 实战
 - Kotlin 基础
   - 变量、运算符、流程控制
   - 函数
+    - 顶层函数
+    - 扩展函数
+    - 局部函数
+  - 类
+    - 访问修饰符
+      - final：不能被重写，类和类中成员默认使用
+      - open：可以被重写，需要明确表明
+      - abstract：必须被重写，只能在抽象类中使用，抽象成员不能有实现
+      - override：重写父类或接口中的成员，如果没有使用 final 表明，重写的成员默认是开放的
+    - 可见性修饰符：类成员，顶层声明
+      - public（默认）：所有地方可见，所有地方可见
+      - internal：模块中可见，模块中可见
+      - protected：子类可见，——
+      - private：类中可见，文件中可见
+    - 内部类和嵌套类
+    - 密封类
 
 #### JVM
 
@@ -107,15 +149,75 @@ Kotlin 实战
 
 第一行代码
 
+- 概述
+- Activity
+  - 用法
+  - Intent
+    - 显式
+    - 隐式
+  - 生命周期
+  - 启动模式
+    - standard
+    - singleTop
+    - singleTask
+    - singleInstance
+- UI 基本组件
+  - 常用控件
+  - 布局
+  - 滑动控件
+    - ListView
+    - RecyclerView
+- Fragment
+  - 用法
+  - 生命周期
+  - 动态加载 Fragment
+- 广播机制
+  - 概述
+    - 无序广播
+    - 有序广播
+  - 注册方式
+    - 静态注册
+    - 动态注册
+  - 本地广播
+- 数据存储
+  - 文件
+  - SharedPreferences
+  - SQLite
+  - LitePal
+- 权限
+  - Android 6.0 以前
+  - Android 6.0 至 Android 10.0 以前
+  - Android 10.0 以后
+- 内容提供器
+- 通知
+- 网络
+  - XML 解析
+    - Pull
+    - SAX
+  - Json 解析
+- 服务
+  - 两种启动方式
+
 ##### 进阶
 
 Android 进阶之光
+
+- Material Design
+- View 体系
+  - 事件分发
+    - dispatchTouchEvent()
+    - onInterceptTouchEvent()
+    - onTouchEvent()
+  - 工作流程
+    - measure
+    - layout
+    - draw
 
 ##### 深入底层
 
 深入理解 Android 内核设计思想
 
-前置技能：操作系统，Java，Linux 操作系统原理
+前置技能：操作系统，Java，Linux 操作系统原理，C++
 
 - Android 进程和线程
   - 进程、线程
@@ -125,6 +227,84 @@ Android 进阶之光
 - ActivityManagerService
   - Activity Stack
   - startActivity 流程
+
+##### 框架相关
+
+RxJava 3.x
+
+- 概念
+  - Observer (观察者)
+  - Observable (被观察者) / Flowable (支持背压)
+  - Subscribe (订阅)
+- 原理
+  - flow (流)
+  - Backpressure (背压)
+    - ERROR
+    - DROP
+    - LATEST
+    - BUFFER
+    - MISSING
+- 线程控制——Scheduler
+  - Schedulers.immediate()：直接在当前线程运行，相当于不指定线程，这是默认的 Scheduler
+  - Schedulers.newThread()：在每执行一个任务时创建一个新的线程，不具有线程缓存机制
+  - Schedulers.io()：适合运行I/0和阻塞操作
+  - Schedulers.computation()：用于CPU 密集型计算任务，即不会被 I/O 等操作限制性能的耗时操作
+  - Schedulers.trampoline()：在当前线程立即执行任务，如果当前线程有任务在执行，则会将其暂停，等插入进来的任务执行完之后，再将未完成的任务接着执行。
+  - AndroidSchedulers.mainThread()：Android 主(UI)线程
+  - Schedulers.single()：拥有一个线程单例，所有的任务都在这一个线程中执行，当此线程中有任务执行时，其他任务将会按照先进先出的顺序依次执行。
+  - Scheduler.from(@NonNull Executor executor)：指定一个线程调度器，由此调度器来控制任务的执行策略。
+
+
+
+RxJava 讲的比较好的：https://www.jianshu.com/p/15b2f3d7141a（讲的是 RxJava 2）
+
+
+
+Retrofit
+
+- 功能扩展
+  - OkHttpClient
+  - addConverterFactory
+  - addCallAdapterFactory
+- 
+
+##### 设计模式
+
+- 六大原则
+  - 单一职责原则
+  - 里氏替换原则
+  - 依赖倒置原则
+  - 接口隔离原则
+  - 迪米特原则
+  - 开闭原则
+- 设计模式
+  - 创建型模式
+    - 工厂模式
+    - 抽象工厂模式
+    - 单例模式
+    - 建造者模式
+    - 原型模式
+  - 结构型模式
+    - 适配器模式
+    - 桥接模式
+    - 组合模式
+    - 装饰器模式
+    - 外观模式
+    - 享元模式
+    - 代理模式
+  - 行为型模式
+    - 责任链模式
+    - 命令模式
+    - 解释器模式
+    - 迭代器模式
+    - 中介者模式
+    - 备忘录模式
+    - 观察者模式
+    - 模板模式
+    - 访问者模式
+  - 其他模式
+    - 过滤器模式
+    - 简单工厂模式
 
 #### 其他文章
 
@@ -152,3 +332,4 @@ Android 进阶之光
 
 [搞懂分布式与高并发和多线程，看这篇就够了](http://mp.weixin.qq.com/s?__biz=MzUyOTk5NDQwOA==&mid=2247485317&idx=1&sn=c5a0f84074c0e101ff0464d298ed22d7&chksm=fa59c042cd2e4954550b2d3a552e56868535ea751cca7d2b2ca850d33e6f65f9627d8584820a&mpshare=1&scene=23&srcid=#rd)
 
+ 
