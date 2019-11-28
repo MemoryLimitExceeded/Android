@@ -83,6 +83,7 @@ https://developer.android.google.cn/guide.html
       - 三次握手
       - 四次挥手
     - 应用场景
+- 应用层
 
 [韩立刚老师主讲 计算机网络第5版谢希仁编写 全集156](https://www.bilibili.com/video/av23124815)
 
@@ -235,28 +236,30 @@ RxJava 3.x
 - 概念
   - Observer (观察者)
   - Observable (被观察者) / Flowable (支持背压)
-  - Subscribe (订阅)
+  - 线程控制——Scheduler
+    - Schedulers.immediate()：直接在当前线程运行，相当于不指定线程，这是默认的 Scheduler
+    - Schedulers.newThread()：在每执行一个任务时创建一个新的线程，不具有线程缓存机制
+    - Schedulers.io()：适合运行I/0和阻塞操作
+    - Schedulers.computation()：用于CPU 密集型计算任务，即不会被 I/O 等操作限制性能的耗时操作
+    - Schedulers.trampoline()：在当前线程立即执行任务，如果当前线程有任务在执行，则会将其暂停，等插入进来的任务执行完之后，再将未完成的任务接着执行。
+    - AndroidSchedulers.mainThread()：Android 主(UI)线程
+    - Schedulers.single()：拥有一个线程单例，所有的任务都在这一个线程中执行，当此线程中有任务执行时，其他任务将会按照先进先出的顺序依次执行。
+    - Scheduler.from(@NonNull Executor executor)：指定一个线程调度器，由此调度器来控制任务的执行策略。
 - 原理
-  - flow (流)
-  - Backpressure (背压)
-    - ERROR
-    - DROP
-    - LATEST
-    - BUFFER
-    - MISSING
-- 线程控制——Scheduler
-  - Schedulers.immediate()：直接在当前线程运行，相当于不指定线程，这是默认的 Scheduler
-  - Schedulers.newThread()：在每执行一个任务时创建一个新的线程，不具有线程缓存机制
-  - Schedulers.io()：适合运行I/0和阻塞操作
-  - Schedulers.computation()：用于CPU 密集型计算任务，即不会被 I/O 等操作限制性能的耗时操作
-  - Schedulers.trampoline()：在当前线程立即执行任务，如果当前线程有任务在执行，则会将其暂停，等插入进来的任务执行完之后，再将未完成的任务接着执行。
-  - AndroidSchedulers.mainThread()：Android 主(UI)线程
-  - Schedulers.single()：拥有一个线程单例，所有的任务都在这一个线程中执行，当此线程中有任务执行时，其他任务将会按照先进先出的顺序依次执行。
-  - Scheduler.from(@NonNull Executor executor)：指定一个线程调度器，由此调度器来控制任务的执行策略。
+  - 流转换原理
+  - 线程控制原理
+  - [流控机制](http://zhangtielei.com/posts/blog-rxjava-backpressure.html)
+    - 背压（Backpressure）
+      - ERROR
+      - DROP
+      - LATEST
+      - BUFFER
+      - MISSING
+    - 节流（Throttling）
+    - 打包处理
+    - 调用栈阻塞（Callstack blocking）
 
-
-
-RxJava 讲的比较好的：https://www.jianshu.com/p/15b2f3d7141a（讲的是 RxJava 2）
+RxJava入门：https://www.jianshu.com/p/15b2f3d7141a（讲的是 RxJava 2）
 
 
 
