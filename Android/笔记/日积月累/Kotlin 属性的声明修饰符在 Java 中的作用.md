@@ -1,31 +1,3 @@
-##### FragmentPagerAdapter 与 FragmentStatePagerAdapter
-
-FragmentStatePagerAdapter与FragmentPagerAdapter用法类似，区别在于，卸载不需要的Fragment时，各自的处理方法不同。FragmentStatePagerAdapter会销毁不需要的Fragment，事务提交后，FragmentManager中的Fragment会被彻底移除，销毁时可在onSaveInstanceState方法中保存信息；FragmentPagerAdapter对于不再需要的Fragment会调用事务的detach方法而非remove方法，仅仅是销毁Fragment的视图，而实例对象仍然保留。所以FragmentStatePagerAdapter更节省内存，当page页面较多时适合使用。如果界面只是少量固定页面，FragmentPagerAdapter更安全。
-
-##### Fragment + ViewPager +TabLayout
-
-实现顶部导航栏
-
-##### 实现底部导航栏
-
-1. [BottomNavigationView+ViewPager+fragment](https://blog.csdn.net/chengmuzhe2690/article/details/89406085#一.BottomNavigationView%2BViewPager%2Bfragment)
-
-2. [BottomNavigationBar+ViewPager(FrameLayout)+fragment](https://blog.csdn.net/chengmuzhe2690/article/details/89406085#二.BottomNavigationBar%2BViewPager(FrameLayout)%2Bfragment)
-
-3. [TabLayout+fragment+viewPager](https://blog.csdn.net/chengmuzhe2690/article/details/89406085#三.TabLayout%2Bfragment%2BviewPager)
-
-4. [FragmentTabHost+ViewPager+fragment](https://blog.csdn.net/chengmuzhe2690/article/details/89406085#四.FragmentTabHost%2BViewPager%2Bfragment)
-
-5. [RadioGroup+Radiobutton+ViewPager+fragment](https://blog.csdn.net/chengmuzhe2690/article/details/89406085#五.RadioGroup%2BRadiobutton%2BViewPager%2Bfragment)
-
-6. [RadioGroup+Radiobutton+FrameLayout+fragment（实现底部栏中间大按钮跳转页面）](https://blog.csdn.net/chengmuzhe2690/article/details/89406085#六.RadioGroup%2BRadiobutton%2BFrameLayout%2Bfragment（实现底部栏中间大按钮跳转页面）)
-
-7. [TextView+LinearLayout+FrameLayout](https://blog.csdn.net/chengmuzhe2690/article/details/89406085#TextView%2BLinearLayout%2BFrameLayout(不建议使用这个方式，所以就不介绍这种方式))
-
-   
-
-##### Kotlin 属性的声明修饰符在 Java 中的作用
-
 Kotlin 版本：Kotlin 1.3
 
 ```.kt
@@ -319,16 +291,4 @@ public final class BaseFragmentKt{
 }
 ```
 
-##### kotlin in out
-
-in：修饰的类型只能作为函数返回，但父类型可以赋值给子类型
-
-out：修饰的类型只能作为函数参数，但子类型可以赋值给父类型
-
-##### Kotlin Unit Any Nothing
-
-Any 相当于 Object
-
-Unit 用于没有返回值的函数，并且没有返回值的函数默认为 Unit
-
-Nothing 来表示永远不存在的值，如果函数的返回类型为Nothing，则表示该函数从不返回（总是抛出异常）。
+##### 

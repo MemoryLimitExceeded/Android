@@ -231,7 +231,7 @@ Android 进阶之光
 
 ##### 框架相关
 
-RxJava 3.x
+[RxJava](https://github.com/ReactiveX/RxJava/wiki) 3.x
 
 - 概念
   - Observer (观察者)
