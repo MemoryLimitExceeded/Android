@@ -211,17 +211,17 @@ Kotlin 实战
     - measure
     - layout
     - draw
-- 动画
-  - [类型](https://blog.csdn.net/carson_ho/article/details/79860980)
-    - View Animation (视图动画)
-      - Drawable Animation (帧动画)
-      - Tween Animation (补间动画)
-    - Property Animation (属性动画)
-  - [过渡动画](https://www.jianshu.com/p/69d48f313dc4) (Transition)
-    - 内容过渡动画
-    - 共享元素过渡动画
-    - 场景过渡动画
-    - 共享元素过渡动画 + 揭露效果
+  - 动画
+    - [类型](https://blog.csdn.net/carson_ho/article/details/79860980)
+      - View Animation (视图动画)
+        - [Drawable Animation](https://blog.csdn.net/carson_ho/article/details/73087488) (帧动画)
+        - [Tween Animation](https://blog.csdn.net/carson_ho/article/details/72827747) (补间动画)
+      - [Property Animation](https://developer.android.google.cn/guide/topics/graphics/prop-animation) (属性动画)
+    - [过渡动画](https://developer.android.com/training/transitions?hl=zh_cn) (Transition 框架)
+      - 内容过渡动画
+      - 共享元素过渡动画
+      - 场景过渡动画
+      - 共享元素过渡动画 + 揭露效果
 
 ##### 深入底层
 
