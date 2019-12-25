@@ -211,7 +211,7 @@ Kotlin 实战
     - measure
     - layout
     - draw
-  - 动画
+  - View 动画
     - [类型](https://blog.csdn.net/carson_ho/article/details/79860980)
       - View Animation (视图动画)
         - [Drawable Animation](https://blog.csdn.net/carson_ho/article/details/73087488) (帧动画)
@@ -222,6 +222,11 @@ Kotlin 实战
       - 共享元素过渡动画
       - 场景过渡动画
       - 共享元素过渡动画 + 揭露效果
+- Window
+  - 概览
+  - 添加和删除
+  - WindowManagerService
+  - 动画
 
 ##### 深入底层
 
