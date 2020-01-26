@@ -34,10 +34,9 @@ Kotlin 实战
 
 #### Android
 
-四大组件
-
-- Activity
-  - 概览
+- 四大组件
+  - Activity
+    - 概览
 
 ##### 框架相关
 
