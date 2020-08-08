@@ -1,5 +1,17 @@
 ### GeoGuiz 地理知识答题 App
 
+> 开发环境：
+>
+> Windows 7 旗舰版
+>
+> Android Studio 3.2
+>
+> SDK Android 9.0 (API 28)
+>
+> 测试环境：
+>
+> HUAWEI 荣耀6 Android 4.4 (API 19 真机)
+
 1. 两个活动，一个是答题界面，另一个是作弊界面，题目是判断题。
 2. 答题界面有五个按钮：True, False, 作弊按钮, Next, Prev.
 
